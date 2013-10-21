@@ -1,6 +1,6 @@
-# SQLiteGlue
+# SQLiteGlue-src
 
-Android &amp; other Java native glue interface to sqlite using Gluegen.
+Source for Android &amp; other Java native glue interface to sqlite using Gluegen.
 
 Unlicense (public domain).
 
@@ -14,17 +14,17 @@ TBD API & some internal details
 
 # Building
 
-## First step
-
-To include the `gluegentools` & `sqlite-amalgamation` subprojects: $ `make init`
-
-## Normal build
-
-$ `make`
+**NOTE:** for this version please build in [sulite / SQLiteGlue-ICU-src](https://github.com/sulite/SQLiteGlue-ICU-src).
 
 ## Regenerage Java & C glue code
 
-$ `make regen`
+**IMPORTANT:** This must be done first:
+
+    $ make init # Include gluegentools submodule
+
+Then to regenerate the Java & C glue code:
+
+    $ make regen
 
 # Adaptations & extensions
 

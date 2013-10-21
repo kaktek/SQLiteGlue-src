@@ -1,5 +1,4 @@
-
-all: ndkbuild
+all: ndk-build
 
 init:
 	git submodule update --init
@@ -9,11 +8,6 @@ regen:
 	sed -i.old 's/^import/\/\/import/' java/org/sqlg/SQLiteGlue.java
 
 # NOTE: adding v (verbose) flag for the beginning stage:
-ndkbuild:
-	cd jni
-	ndk-build
-
-clean:
-	rm -rf obj
-	rm -rf libs
+ndk-build:
+	echo "Please build from SQLiteGlue-ICU-src"
 
